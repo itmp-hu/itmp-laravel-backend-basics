@@ -1,7 +1,7 @@
 # Backend fejlesztés alapjai Laravellel
 ## ITMP Klub képzés infotanároknak
 
-Az ITMP Klub újabb izgalmas képzést kínál a webes fejlesztés területén! 2025. március 1-jén, szombaton, egy egynapos Laravel alapú backend fejlesztési képzésen vehetnek részt klubtagjaink.  
+Az ITMP Klub újabb izgalmas képzést kínál a webes fejlesztés területén. 2025. március 1-jén, szombaton, egy egynapos Laravel alapú backend fejlesztési képzésen vehetnek részt klubtagjaink.  
 Ha szeretnéd megismerni a PHP világ egyik legnépszerűbb keretrendszerét, és megtanulni, hogyan készíthetsz REST API-kat Laravel segítségével, akkor ez a képzés neked szól! A képzés során az alapoktól indulunk, de alapszintű programozási és PHP ismeretekre lesz szükség.  
 A nap során betekintést nyerhetsz a Laravel világába, ahol megmutatjuk, hogyan építhetsz hatékony backend rendszereket, és hogyan kezelheted az adatokat modern és strukturált módon.  
 A képzést Sándor László vezeti, a győri Jedlik Ányos Gépipari és Informatikai Technikum tapasztalt oktatója, aki szakértelmével és gyakorlati tudásával segít, hogy könnyedén elsajátítsd a Laravel alapjait. Csatlakozz hozzánk, és lépj be a backend fejlesztés izgalmas világába!
