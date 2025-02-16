@@ -29,7 +29,7 @@ A Laravel egy modern PHP keretrendszer, amely megkönnyíti a webalkalmazások f
 - Artisan CLI a gyors parancssori műveletekhez
 - Beépített hitelesítési és jogosultságkezelési megoldások
 - Könnyű API fejlesztés és támogatás a RESTful architektúrához
-- Nagyon jól használható dokumentáció
+- Nagyon jól használható [dokumentáció](https://laravel.com/docs)
 
 ### Szükséges szoftverek: **PHP, Composer, Laravel installer**
 
@@ -37,21 +37,52 @@ A Laravel egy modern PHP keretrendszer, amely megkönnyíti a webalkalmazások f
 - A **Composer** egy PHP csomagkezelő, amely lehetővé teszi külső könyvtárak és függőségek egyszerű telepítését, kezelését és frissítését egy projektben. A `composer.json` fájlban meghatározhatók a szükséges csomagok, amelyeket a `composer install` vagy `composer update` parancs telepít és frissít a **vendor** mappában.
 - **Laravel Installer**: A Laravel telepítéséhez szükséges parancssori eszköz.
 
-**Telepítés:**
-A fenti szoftverek egyesével is telepíthetők, de a Laravel dokumentációjában található script segítségével egy lépésben telepíthető mindhárom [innen](https://laravel.com/docs/11.x/installation#installing-php).
+**Telepítés**
 
-<details>
-<summary>Nyitsd le a Windows telepítő scripthez!</summary>
+A fenti szoftverek telepíthetők egyesével:
+ - [XAMPP](https://www.apachefriends.org/hu/index.html)
+ - [Composer](https://getcomposer.org)
+ - Laravel installer az alábbi parancs futtatásával:
+ 
+    ```sh
+    composer global require laravel/installer
+    ```
+---
 
-Windows-ban PowerShellt kell indítani **rendszergazdaként**, majd ott lefuttatni az alábbi parancsot:
+ ...vagy a Laravel dokumentációjában található script segítségével (*Windows, Linux vagy macOS operációs rendszerre*) egy lépésben [innen](https://laravel.com/docs/11.x/installation#installing-php).
 
+Például Windows-ban PowerShellt kell indítani **rendszergazdaként**, majd ott lefuttatni az alábbi parancsot:
 ```powershell
 # Run as administrator...
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://php.new/install/windows/8.4'))
 ```
+
+<details>
+<summary>Ez utóbbi esetben előfordulhat, hogy <b>a szerver nem indul el</b>...</summary>
+
+Ha a szerver az alábbi hibaüzenettel nem indul el:
+
+```sh
+Failed to listen on 127.0.0.1:8000 (reason: ?)
+Failed to listen on 127.0.0.1:8001 (reason: ?)
+...
+```
+
+Keressük meg a `php.ini` fájlt a következő helyen:
+
+```sh
+c:\Users\<username>\.config\herd-lite\bin\php.ini 
+```
+
+és töröljük ki az 'E' betűt a `variables_order` sorban:
+
+```php
+variables_order = "EGPCS"
+helyett
+variables_order = "GPCS"
+```
 </details>
 
-*Egyéb operációs rendszerekre (macOS, Linux) szintén kimásolható a szükséges parancs a fenti linkről.*
 
 ### Laravel fejlesztés elindítása
 Új projekt létrehozása:
