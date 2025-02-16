@@ -42,9 +42,7 @@ class UserController extends Controller
     {
         //TODO: validate the request!!!
         
-        $user = User::create([
-            $request->all()
-        ]);
+        $user = User::create($request->all());
         
         return response()->json($user, 201);
     }
