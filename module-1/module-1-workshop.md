@@ -9,7 +9,10 @@
 
 > [!NOTE]  
 > **Cél:**  
-> Minden szükséges eszköz telepítve legyen a számítógépen: Composer, parancssori PHP, Laravel installer, Visual Studio Code! Legyen létrehozva egy Laravel projekt, telepítve legyen az api környezet! Értenünk kell egy Laravel projekt felépítését, valamint azt, hogy milyen mappákat, fájlokat tartalmaz! Hozzunk létre fake usereket a teszteléshez és egy egyszerű GET endpointtal adjuk vissza az összes usert!
+> - Minden szükséges eszköz telepítve legyen a számítógépen: Composer, parancssori PHP, Laravel installer, Visual Studio Code! 
+> - Legyen létrehozva egy Laravel projekt, telepítve legyen az api környezet! 
+> - Értenünk kell egy Laravel projekt felépítését, valamint azt, hogy milyen mappákat, fájlokat tartalmaz!
+> - Hozzunk létre fake usereket a teszteléshez és egy egyszerű GET endpointtal adjuk vissza az összes usert!
 
 <hr />
 
@@ -24,9 +27,6 @@
 - Ha valamelyik előfeltétel nem teljesül és nem fut le a telepítő, akkor [innen](https://laravel.com/docs/11.x/installation#installing-php) telepíthet az összeset egy lépésben.
 - Ha nincs feltelepítve [Visual Studio Code](https://code.visualstudio.com/), akkor azt is telepítsd!
 
-## Legenerált projektfájlok és mappák tanulmányozása
-
-
 ## Projekt inicializálása
 
 - A projekt mappáját nyisd meg Visual Studio Code-ban!
@@ -39,6 +39,30 @@
   ```
 
   - A telepítés végén a migrációk lefuttatásához kér engedélyt. Válaszolj **yes**-szel!
+
+## Legenerált projektfájlok és mappák tanulmányozása
+
+Keresd meg és tanulmányozd az előadáson megbeszélt mappákat és állományokat!
+
+## Az első végpont létrehozása
+A Laravelben a REST API végpontokat a `routes/api.php` fájlban definiáljuk.
+
+A következő kód egy egyszerű végpontot definiál, amely a "Hello, World!" üzenetet adja vissza:
+
+```php
+Route::get('/greeting', function () {
+    return 'Hello, World!';
+});
+```
+
+Ha még nem fut a Laravel fejlesztői szerver, akkor először egy terminál ablakban indítsuk el:
+```sh
+php artisan serve
+```
+
+Teszteljük le a végpontot egy böngészőben: [http://127.0.0.1:8000/api/greeting](http://127.0.0.1:8000/api/greeting)
+
+# BÓNUSZ
 
 ## Fake userek generálása
 

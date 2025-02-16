@@ -152,3 +152,27 @@ composer install
 - **.env** – Környezeti változók beállításai, például adatbáziskapcsolat.
 - **artisan** – Laravel parancssori segédeszköz.
 - **composer.json** – A csomagfüggőségek meghatározása.
+
+
+## Az első végpont létrehozása
+A Laravelben a REST API végpontokat a `routes/api.php` fájlban definiáljuk.
+
+A következő kód egy egyszerű végpontot definiál, amely a "Hello, World!" üzenetet adja vissza:
+
+```php
+Route::get('/greeting', function () {
+    return 'Hello, World!';
+});
+```
+
+Ha még nem fut a Laravel fejlesztői szerver, akkor először egy terminál ablakban indítsuk el:
+```sh
+php artisan serve
+```
+
+Teszteljük le a végpontot egy böngészőben: [http://127.0.0.1:8000/api/greeting](http://127.0.0.1:8000/api/greeting)
+
+## User management
+A Laravel alapértelmezésben tartalmazza a felhasználókezelést. Egy frissen telepített projektben létezik a `User` modell illetve hozzá kapcsolódóan több osztály is.
+
+A gyakorlat végén találunk egy bónusz példát, amelyben a **UserFactory** osztály segítségével létrehozunk teszteléshez használható fake felhasználókat és egy egyszerű GET endpointtal visszaadjuk az összes usert.
