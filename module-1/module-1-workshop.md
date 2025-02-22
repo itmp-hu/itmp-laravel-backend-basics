@@ -2,35 +2,34 @@
 
 - Laravel telepítése
 - Projekt inicializálása
-- Fake userek generálása
 - GET endpoint létrehozása
-- artisan szerver futtatása
+- Webszerver futtatása
 - GET endpoint tesztelése böngészőben
 
 > [!NOTE]  
 > **Cél:**  
 > - Minden szükséges eszköz telepítve legyen a számítógépen: Composer, parancssori PHP, Laravel installer, Visual Studio Code! 
-> - Legyen létrehozva egy Laravel projekt, telepítve legyen az api környezet! 
+> - Legyen létrehozva egy Laravel projekt, telepítve legyen az API környezet! 
 > - Értenünk kell egy Laravel projekt felépítését, valamint azt, hogy milyen mappákat, fájlokat tartalmaz!
-> - Hozzunk létre fake usereket a teszteléshez és egy egyszerű GET endpointtal adjuk vissza az összes usert!
+> - Hozzunk létre egy egyszerű GET endpointot és teszteljük azt böngészőben!
+> - BÓNUSZ: Hozzunk létre fiktív usereket a teszteléshez és egy egyszerű GET endpointtal adjuk vissza az összes usert!
 
-<hr />
+---
 
 ## Laravel projekt telepítése
 
-- Hozz létre új Laravel projektet! Lép be a kívánt mappába, majd futtasd le a következő parancsot:
+- Hozz létre új Laravel projektet! Lépj be a kívánt mappába, majd futtasd le a következő parancsot:
 
   ```sh
   laravel new project-name
   ```
 
-- Ha valamelyik előfeltétel nem teljesül és nem fut le a telepítő, akkor [innen](https://laravel.com/docs/11.x/installation#installing-php) telepíthet az összeset egy lépésben.
+- Ha valamelyik előfeltétel nem teljesül és nem fut le a telepítő, akkor [innen](https://laravel.com/docs/11.x/installation#installing-php) telepíthető az összes egy lépésben.
 - Ha nincs feltelepítve [Visual Studio Code](https://code.visualstudio.com/), akkor azt is telepítsd!
 
 ## Projekt inicializálása
 
 - A projekt mappáját nyisd meg Visual Studio Code-ban!
-- Kered meg és tanulmányozd az említett mappákat és állományokat! 
 - Nyiss egy terminált ablakot! A legegyszerűbb VS Code-ban: **View > Terminal**
 - Telepítsd a backend környezetet a következő paranccsal:
 
@@ -55,10 +54,17 @@ Route::get('/greeting', function () {
 });
 ```
 
-Ha még nem fut a Laravel fejlesztői szerver, akkor először egy terminál ablakban indítsuk el:
+## Szerver elindítása és a route tesztelése
+
+Terminálban futtasd le a következő parancsot:
 ```sh
 php artisan serve
 ```
+- A szerver elindítása után a terminálban megjelenik a következő üzenet:
+
+  ```sh
+  INFO Server running on [http://127.0.0.1:8000](http://127.0.0.1:8000).
+  ```
 
 Teszteljük le a végpontot egy böngészőben: [http://127.0.0.1:8000/api/greeting](http://127.0.0.1:8000/api/greeting)
 
@@ -92,17 +98,5 @@ Teszteljük le a végpontot egy böngészőben: [http://127.0.0.1:8000/api/greet
   use App\Models\User;
   ```
 
-## Szerver elindítása és a route tesztelése
-
-Terminálban futtasd le a következő parancsot:
-```sh
-php artisan serve
-```
-- A szerver elindítása után a terminálban megjelenik a következő üzenet:
-
-  ```sh
-  INFO Server running on [http://127.0.0.1:8000](http://127.0.0.1:8000).
-  ```
-  
 Egy böngészőben nyisd meg a következő URL-t: [http://127.0.0.1:8000/api/users](http://127.0.0.1:8000/api/users) és ellenőrizd, hogy egy usereket tartalmazó JSON-t kapunk-e vissza.
 

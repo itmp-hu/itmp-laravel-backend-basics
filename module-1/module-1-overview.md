@@ -1,9 +1,9 @@
 # Laravel Backend fejlesztés: 1. modul - Alapismeretek
 
 ## Backend és Frontend
-A webfejlesztésben két fő terület létezik: **Backend** és **Frontend**.
+A webfejlesztés két fő területe a **Backend** és **Frontend**.
 
-- **Backend (szerveroldali fejlesztés)**: A háttérrendszer, amely az adatok kezeléséért, üzleti logika végrehajtásáért és az API-k biztosításáért felel. Ez tartalmazza az adatbázist, szerveroldali programokat és API-kat. 
+- **Backend (szerveroldali fejlesztés)**: A háttérrendszer amely az adatok kezeléséért, az üzleti logika végrehajtásáért és az API-k biztosításáért felel. Ez tartalmazza az adatbázist, szerveroldali programokat és API-kat. 
 
 - **Frontend (kliensoldali fejlesztés)**: Az a rész, amelyet a felhasználók látnak és interakcióba lépnek vele. HTML, CSS és JavaScript segítségével épül fel, gyakran modern keretrendszerekkel, például Angular, React vagy Vue.js.
 
@@ -33,7 +33,7 @@ A Laravel egy modern PHP keretrendszer, amely megkönnyíti a webalkalmazások f
 
 ### Szükséges szoftverek: **PHP, Composer, Laravel installer**
 
-- **PHP**: A Laravel a PHP nyelven íródik, ezért először telepíteni kell a PHP-t.
+- **PHP**: A Laravel PHP nyelven íródik, ezért először telepíteni kell a PHP-t.
 - A **Composer** egy PHP csomagkezelő, amely lehetővé teszi külső könyvtárak és függőségek egyszerű telepítését, kezelését és frissítését egy projektben. A `composer.json` fájlban meghatározhatók a szükséges csomagok, amelyeket a `composer install` vagy `composer update` parancs telepít és frissít a **vendor** mappában.
 - **Laravel Installer**: A Laravel telepítéséhez szükséges parancssori eszköz.
 
@@ -42,7 +42,7 @@ A Laravel egy modern PHP keretrendszer, amely megkönnyíti a webalkalmazások f
 A fenti szoftverek telepíthetők egyesével:
  - [XAMPP](https://www.apachefriends.org/hu/index.html)
  - [Composer](https://getcomposer.org)
- - Laravel installer az alábbi parancs futtatásával:
+ - Laravel installer - a Composer telepítése után az alábbi parancs futtatásával:
  
     ```sh
     composer global require laravel/installer
@@ -58,7 +58,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 ```
 
 <details>
-<summary>Ez utóbbi esetben előfordulhat, hogy <b>a szerver nem indul el</b>...</summary>
+<summary>Ez utóbbi esetben a számítógép konfigurációjától függően előfordulhat, hogy <b>a szerver nem indul el</b>...</summary>
 
 Ha a szerver az alábbi hibaüzenettel nem indul el:
 
@@ -115,7 +115,7 @@ A Laravel beépített szerverét az alábbi paranccsal indíthatjuk el:
 php artisan serve
 ```
 
-Ez a szerver az alábbi címen lesz elérhető: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+Ez a szerver alapértelmezetten az alábbi címen lesz elérhető: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ### A Laravel mappastruktúra
 

@@ -28,7 +28,13 @@ Példa route létrehozására:
 Route::get('/users', [UserController::class, 'index']);
 ```
 
-Az így létrejött végpont az alábbi címen érhető el: `http://127.0.0.1:8000/api/users`. A **get** kérést a `UserController` osztály `index()` metódusa fogja kiszolgálni.
+A `UserController` osztályt a `use` utasítással importálni kell a `routes/api.php` fájl elején:
+```php
+use App\Http\Controllers\UserController;
+```
+
+
+Az így létrejött végpont az alábbi címen érhető el: [http://127.0.0.1:8000/api/users](http://127.0.0.1:8000/api/users). A **get** kérést a `UserController` osztály `index()` metódusa fogja kiszolgálni.
 
 <details>
 <summary>Összes CRUD végpont létrehozása</summary>
