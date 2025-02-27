@@ -261,7 +261,7 @@ public function store(Request $request)
 
 ## **Gyakori validálási szabályok**  
 
-Laravel rengeteg beépített validálási szabályt biztosít:  
+A Laravel rengeteg beépített validálási szabályt biztosít:  
 
 | Szabály               | Leírás |
 |-----------------------|--------|
@@ -275,4 +275,4 @@ Laravel rengeteg beépített validálási szabályt biztosít:
 | `unique:table,column` | Egyedi érték az adott oszlopban |
 | `exists:table,column` | Léteznie kell az adott táblában |
 
-Az **összes szabály** a dokumentációban [itt](https://laravel.com/docs/11.x/validation#available-validation-rules) található.
+Az **összes szabály** a dokumentációban [itt](https://laravel.com/docs/12.x/validation#available-validation-rules) található.

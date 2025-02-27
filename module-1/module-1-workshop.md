@@ -2,9 +2,11 @@
 
 - Laravel telepítése
 - Projekt inicializálása
-- GET endpoint létrehozása
+- `"Hello World!"` endpoint létrehozása
+- `/api/users` endpont létrehozása
 - Webszerver futtatása
-- GET endpoint tesztelése böngészőben
+- Végpontok tesztelése böngészőben
+
 
 > [!NOTE]  
 > **Cél:**  
@@ -24,7 +26,7 @@
   laravel new project-name
   ```
 
-- Ha valamelyik előfeltétel nem teljesül és nem fut le a telepítő, akkor [innen](https://laravel.com/docs/11.x/installation#installing-php) telepíthető az összes egy lépésben.
+- Ha valamelyik előfeltétel nem teljesül és nem fut le a telepítő, akkor [innen](https://laravel.com/docs/12.x/installation#installing-php) telepíthető az összes egy lépésben.
 - Ha nincs feltelepítve [Visual Studio Code](https://code.visualstudio.com/), akkor azt is telepítsd!
 
 ## Projekt inicializálása
@@ -68,9 +70,7 @@ php artisan serve
 
 Teszteljük le a végpontot egy böngészőben: [http://127.0.0.1:8000/api/greeting](http://127.0.0.1:8000/api/greeting)
 
-# BÓNUSZ
-
-## Fake userek generálása
+## Fiktív userek generálása
 
 - Keresd meg és szerkesztd a következő fájlt: `database/seeders/DatabaseSeeder.php`:
 

@@ -49,7 +49,7 @@ A fenti szoftverek telepíthetők egyesével:
     ```
 ---
 
- ...vagy a Laravel dokumentációjában található script segítségével (*Windows, Linux vagy macOS operációs rendszerre*) egy lépésben [innen](https://laravel.com/docs/11.x/installation#installing-php).
+ ...vagy a Laravel dokumentációjában található script segítségével (*Windows, Linux vagy macOS operációs rendszerre*) egy lépésben [innen](https://laravel.com/docs/12.x/installation#installing-php).
 
 Például Windows-ban PowerShellt kell indítani **rendszergazdaként**, majd ott lefuttatni az alábbi parancsot:
 ```powershell
@@ -91,7 +91,7 @@ variables_order = "GPCS"
 laravel new project-name
 ```
 <details>
-<summary>A telepítés során az alábbi kérdésekre kell válaszolni:</summary>
+<summary><b>Laravel 11</b> telepítés során az alábbi kérdésekre kell válaszolni</summary>
 
 - Would you like to install a starter kit? **Válasz**: none
 - Which testing framework do you prefer? **Válasz**: tetszőleges (monst nem fogunk automata teszteket írni semelyik redszerben)
@@ -100,6 +100,16 @@ laravel new project-name
 - Would you like to run the default database migrations? **Válasz**: yes.
  
 </details>
+
+<details>
+<summary><b>Laravel 12</b> telepítés során az alábbi kérdésekre kell válaszolni</summary>
+
+- Which starter kit would you like to install? **Válasz**: none
+- Which database will your application use? **Válasz**: sqlite
+- Would you like to run npm install and npm run build? **Válasz**: no.
+ 
+</details>
+
 
 A Laravel legújabb verzióiban alapártelmezésben már nincs benne az API fejlesztés támogatása, ezért a következő parancs futtatásával telepíteni kell:
 
@@ -121,26 +131,26 @@ Ez a szerver alapértelmezetten az alábbi címen lesz elérhető: [http://127.0
 
 A Laravel keretrendszer jól strukturált mappaszerkezettel rendelkezik. Egy egyszerű backend fejlesztése során az alábbi mappákat használjuk leggyakrabban:
 
-**1. app/**
+**1. /app**
 Az alkalmazás fő logikáját tartalmazza:
 - **Models/** – Az adatbázis modellek itt helyezkednek el.
 - **Http/Controllers/** – A vezérlők (Controllers), amelyek a CRUD műveleteket kezelik.
 
-**2. config/**
+**2. /config**
 Az alkalmazás konfigurációs fájljait tartalmazza, például `database.php` az adatbáziskapcsolatokhoz.
 
-**3. database/**
+**3. /database**
 Az adatbázissal kapcsolatos fájlok:
 - **migrations/** – Az adatbázis táblák létrehozásához és módosításához.
 - **seeders/** – Tesztadatok beszúrására.
 - **database.sqlite** – SQLite adatbázisfájl, amely kis fejlesztési projektekhez használható.
 
-**4. routes/**
+**4. /routes**
 Az alkalmazás útvonalai:
 - **api.php** – A REST API végpontokat itt definiáljuk.
 - **web.php** – A webalkalmazások végpontjait itt definiáljuk. (Ezt backendben nem használjuk.)
 
-**5. vendor/**
+**5. /vendor**
 A Composer által telepített külső csomagok tárolására szolgál. Ez a mappa benne van a `.gitignore`-ban, így nem kerül a git repository-ba.
 
 Egy frissen klónozott projekthez utólag telepítendők a csomagok a következő paranccsal:
@@ -175,4 +185,4 @@ Teszteljük le a végpontot egy böngészőben: [http://127.0.0.1:8000/api/greet
 ## User management
 A Laravel alapértelmezésben tartalmazza a felhasználókezelést. Egy frissen telepített projektben létezik a `User` modell illetve hozzá kapcsolódóan több osztály is.
 
-A gyakorlat végén találunk egy bónusz példát, amelyben a **UserFactory** osztály segítségével létrehozunk teszteléshez használható fake felhasználókat és egy egyszerű GET endpointtal visszaadjuk az összes usert.
+A gyakorlat végén a **DatabaseSeeder** osztályban létrehozunk teszteléshez használható fiktív felhasználókat és egy egyszerű GET endpointtal visszaadjuk az összes usert.
