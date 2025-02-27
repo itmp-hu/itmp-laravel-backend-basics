@@ -1,17 +1,24 @@
 # Laravel backend API fejlesztés előfeltételek
 
-## Szükséges szoftverek: PHP, Composer, Laravel installer
+### Szükséges szoftverek: **PHP, Composer, Laravel installer**
+
+- **PHP**: A Laravel PHP nyelven íródik, ezért először telepíteni kell a PHP-t.
+- A **Composer** egy PHP csomagkezelő, amely lehetővé teszi külső könyvtárak és függőségek egyszerű telepítését, kezelését és frissítését egy projektben. A `composer.json` fájlban meghatározhatók a szükséges csomagok, amelyeket a `composer install` vagy `composer update` parancs telepít és frissít a **vendor** mappában.
+- **Laravel Installer**: A Laravel telepítéséhez szükséges parancssori eszköz.
+
+**Telepítés**
+
 A fenti szoftverek telepíthetők egyesével:
  - [XAMPP](https://www.apachefriends.org/hu/index.html)
  - [Composer](https://getcomposer.org)
- - Laravel installer az alábbi parancs futtatásával:
+ - Laravel installer - a Composer telepítése után az alábbi parancs futtatásával:
  
     ```sh
     composer global require laravel/installer
     ```
 ---
 
- ...vagy a Laravel dokumentációjában található script segítségével (*Windows, Linux vagy macOS operációs rendszerre*) egy lépésben [innen](https://laravel.com/docs/11.x/installation#installing-php).
+ ...vagy a Laravel dokumentációjában található script segítségével (*Windows, Linux vagy macOS operációs rendszerre*) egy lépésben [innen](https://laravel.com/docs/12.x/installation#installing-php).
 
 Például Windows-ban PowerShellt kell indítani **rendszergazdaként**, majd ott lefuttatni az alábbi parancsot:
 ```powershell
