@@ -1,3 +1,5 @@
+<img src="assets/images/itmp-laravel-backend-basics.png">
+
 # Backend fejlesztés alapjai Laravellel
 ## ITMP Klub képzés infotanároknak
 
@@ -30,6 +32,3 @@ A képzést Sándor László vezeti, a győri Jedlik Ányos Gépipari és Inform
 
 ### További információk:
 - **Előfeltételek:** Alapszintű programozási és PHP ismeretek.
-- **Kapcsolattartó:** További információkért keress minket az ITMP Klub központi e-mail címén.
-
-Várunk szeretettel a képzésen!
